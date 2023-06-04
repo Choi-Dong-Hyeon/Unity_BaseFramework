@@ -20,6 +20,9 @@ public class Managers : MonoBehaviour
     SoundManager sound = new SoundManager();
     public static SoundManager Sound { get { return Instance.sound; } }
 
+    DataManager data = new DataManager();
+    public static DataManager Data { get { return Instance.data; } }
+
 
     public static void Init()
     {
@@ -35,6 +38,7 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             instance = go.GetComponent<Managers>();
             instance.sound.Init();
+            instance.data.Init();
         }
     }
 

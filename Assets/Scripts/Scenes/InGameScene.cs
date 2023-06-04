@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class InGameScene : BaseScene
 {
     void Start()
@@ -9,6 +11,7 @@ public class InGameScene : BaseScene
     {
         base.Init();
         _scene = Define.Scene.InGame;
+        Dictionary<int, Stat> dict = Managers.Data.StatDict;
     }
 
     public override void Clear()
